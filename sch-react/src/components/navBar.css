@@ -1,0 +1,26 @@
+.menu-list {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 25%;
+  text-align: center;
+  background-color: #202020;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding-left: 0;
+}
+
+.menu-list-item {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.menu-list-item {
+  padding: 14px ;
+  width: 100%;
+}
+
+.menu-list-item:hover {
+  background-color: #ec6c2c;
+}

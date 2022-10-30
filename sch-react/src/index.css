@@ -1,0 +1,17 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-image: linear-gradient(to top, #2e218d 0%, #f47f3b 100%);
+}
+#root .root {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  height: 100vh;
+}
+
+

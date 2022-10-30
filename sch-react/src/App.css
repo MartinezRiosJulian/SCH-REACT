@@ -1,0 +1,30 @@
+.menu-container {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  margin: 12px 0;
+}
+
+.menu-container {
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-container {
+  width: 100%;
+  text-align: center;
+  height: 0;
+  position: absolute;
+  top: 36px;
+}
+
+.logo-sch {
+  border-radius: 50%;
+  border: 5px solid #ffff;
+  height: 80px;
+  width: 80px;
+}
