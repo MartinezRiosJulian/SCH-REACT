@@ -1,5 +1,5 @@
 .menu-container {
-  grid-column: 1/5;
+  grid-column: 1/12;
   grid-row: 1/2;
   margin: 12px 0;
 }
@@ -12,6 +12,10 @@
 a {
   text-decoration: none;
   color: #fff;
+}
+
+a:hover {
+  color: #202020;
 }
 
 .logo-container {
@@ -27,4 +31,27 @@ a {
   border: 5px solid #ffff;
   height: 80px;
   width: 80px;
+}
+
+.cart-site {
+  grid-column: 10/11;
+  grid-row: 13/15;
+  padding: 10%;
+}
+
+.card-site-llantas {
+  grid-column: 2/6;
+  grid-row: 4/6;
+}
+.card-site-opticas {
+  grid-column: 2/6;
+  grid-row: 8/10;
+}
+.card-site-pastillas {
+  grid-column: 7/11;
+  grid-row: 4/6;
+}
+.card-site-amortiguadores {
+  grid-column: 7/11;
+  grid-row: 8/10;
 }

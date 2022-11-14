@@ -3,6 +3,7 @@
   justify-content: space-around;
   width: 25%;
   text-align: center;
+  border-radius: 26px;
   background-color: #202020;
   overflow: hidden;
   cursor: pointer;
@@ -22,5 +23,5 @@
 }
 
 .menu-list-item:hover {
-  background-color: #ec6c2c;
+  background-color: #ffff;
 }

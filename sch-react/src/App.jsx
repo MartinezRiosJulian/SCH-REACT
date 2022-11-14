@@ -1,19 +1,20 @@
 import "./App.css";
-import "./components/navBar.jsx"
-import Navbar from "./components/navBar.jsx";
-import "./components/navBar.css";
+import Card from "./components/Cards/card";
+import CartWidget from "./components/Cartwidget/cartWidget";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Navbar from "./components/Navbar/navBar.jsx";
 
 function App() {
-  let buttonServicios = "Servicios";
-  let buttonProductos = "Productos";
-  let buttonNosotros = "Nosotros";
-  let buttonContacto = "Contactos";
+  let buttonLlantas = "Llantas";
+  let buttonOpticas = "Opticas";
+  let buttonPastillas = "Pastillas.F";
+  let buttonAmortiguadores = "Amortiguadores";
   return (
     <div className="root">
       <section className="section">
         <header className="logo-container">
           <img
-            src="./src/assets/SCH.webp"
+            src="public/assets/SCH.webp"
             className="logo-sch"
             alt="Logo de SCHmecanica"
             width="90"
@@ -22,11 +23,30 @@ function App() {
         </header>
       </section>
       <nav className='menu-container'>
-        <a href=""><Navbar boton={buttonServicios} /></a>
-        <a href=""><Navbar boton={buttonProductos} /></a>
-        <a href=""><Navbar boton={buttonNosotros} /></a>
-        <a href=""><Navbar boton={buttonContacto} /></a>
+        <a href=""><Navbar boton={buttonLlantas} /></a>
+        <a href=""><Navbar boton={buttonOpticas} /></a>
+        <a href=""><Navbar boton={buttonPastillas} /></a>
+        <a href=""><Navbar boton={buttonAmortiguadores} /></a>
       </nav>
+      <div className="card-site-llantas">
+        <Card obj={"Producto"} />
+      </div>
+      <div className="card-site-opticas">
+        <Card obj={"Producto"} />
+      </div>
+      <div className="card-site-pastillas">
+        <Card obj={"Producto"} />
+      </div>
+      <div className="card-site-amortiguadores">
+        <Card obj={"Producto"} />
+      </div>
+      <div className="cart-site">
+        <a href=""><CartWidget /></a>
+      </div>
+      <div>
+        <ItemListContainer/>
+      </div>
+
     </div>
   )
 }
