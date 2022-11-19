@@ -1,54 +1,33 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
-import Card from "./components/Cards/card";
-import CartWidget from "./components/Cartwidget/cartWidget";
+import "./components/Cards/card.css";
+import Cart from "./pages/Cart/cart";
+import Count from "./components/Count/Count";
+import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Logo from "./components/Logo/Logo";
 import Navbar from "./components/Navbar/navBar.jsx";
 
 function App() {
-  let buttonLlantas = "Llantas";
-  let buttonOpticas = "Opticas";
-  let buttonPastillas = "Pastillas.F";
-  let buttonAmortiguadores = "Amortiguadores";
   return (
     <div className="root">
-      <section className="section">
-        <header className="logo-container">
-          <img
-            src="public/assets/SCH.webp"
-            className="logo-sch"
-            alt="Logo de SCHmecanica"
-            width="90"
-            height="90"
-          />
-        </header>
-      </section>
-      <nav className='menu-container'>
-        <a href=""><Navbar boton={buttonLlantas} /></a>
-        <a href=""><Navbar boton={buttonOpticas} /></a>
-        <a href=""><Navbar boton={buttonPastillas} /></a>
-        <a href=""><Navbar boton={buttonAmortiguadores} /></a>
-      </nav>
-      <div className="card-site-llantas">
-        <Card obj={"Producto"} />
-      </div>
-      <div className="card-site-opticas">
-        <Card obj={"Producto"} />
-      </div>
-      <div className="card-site-pastillas">
-        <Card obj={"Producto"} />
-      </div>
-      <div className="card-site-amortiguadores">
-        <Card obj={"Producto"} />
-      </div>
-      <div className="cart-site">
-        <a href=""><CartWidget /></a>
-      </div>
-      <div>
-        <ItemListContainer/>
-      </div>
+      <BrowserRouter>
+        <Logo />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/" element={<Logo />} />
+          <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
+          <Route path="/detail/:productId" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
 
+          <Route path="*" element={<Navigate to={"/"} />} />
+        </Routes>
+        <Cart />  
+        {/* <Count /> */}
+      </BrowserRouter>
     </div>
-  )
+  );
 }
 
 export default App;

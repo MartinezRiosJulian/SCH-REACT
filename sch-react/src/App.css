@@ -11,7 +11,7 @@
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #fff;  
 }
 
 a:hover {
@@ -39,19 +39,15 @@ a:hover {
   padding: 10%;
 }
 
-.card-site-llantas {
+.card-site {
   grid-column: 2/6;
-  grid-row: 4/6;
+  grid-row: 4/12;
 }
-.card-site-opticas {
-  grid-column: 2/6;
-  grid-row: 8/10;
-}
-.card-site-pastillas {
-  grid-column: 7/11;
-  grid-row: 4/6;
-}
-.card-site-amortiguadores {
-  grid-column: 7/11;
-  grid-row: 8/10;
+
+.loading {
+  color: #ffff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size:xx-large;
 }
