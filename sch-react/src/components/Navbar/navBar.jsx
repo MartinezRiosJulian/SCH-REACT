@@ -6,22 +6,22 @@ const Navbar = () => {
     <nav className="menu-container">
       <ul className="menu-list">
         <li className="menu-list-item">
-          <Link to={"/categoria/llantas"}>Llantas</Link>
+          <Link to={"/categoria/Llantas"}>Llantas</Link>
         </li>
       </ul>
       <ul className="menu-list">
         <li className="menu-list-item">
-          <Link to={"/categoria/opticas"}>Opticas</Link>
+          <Link to={"/categoria/Opticas"}>Opticas</Link>
         </li>
       </ul>
       <ul className="menu-list">
         <li className="menu-list-item">
-          <Link to={"/categoria/pastillas"}>Pastillas.F</Link>
+          <Link to={"/categoria/Pastillas"}>Pastillas.F</Link>
         </li>
       </ul>
       <ul className="menu-list">
         <li className="menu-list-item">
-          <Link to={"/categoria/amortiguadores"}> Amortiguadores</Link>
+          <Link to={"/categoria/Amortiguadores"}> Amortiguadores</Link>
         </li>
       </ul>
     </nav>

@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import "./components/Cards/card.css";
+import "./components/Count/Count";
 import Cart from "./pages/Cart/cart";
-import Count from "./components/Count/Count";
 import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Logo from "./components/Logo/Logo";
@@ -23,8 +23,7 @@ function App() {
 
           <Route path="*" element={<Navigate to={"/"} />} />
         </Routes>
-        <Cart />  
-        {/* <Count /> */}
+        <Cart />
       </BrowserRouter>
     </div>
   );

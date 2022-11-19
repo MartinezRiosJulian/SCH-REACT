@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { gFetch } from "../../utils/gFetch";
 import "../Cards/card.css";
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = (obj) => {
   const [products, setProducts] = useState([]);
@@ -10,12 +11,12 @@ const ItemListContainer = (obj) => {
 
   useEffect(() => {
     if (categoriaId) {
-      gFetch
-        .then((resp) => setProducts(resp.filter (prod => prod.categoria === categoriaId)))
+      gFetch()
+        .then((resp) => setProducts(resp.filter(prod => prod.categoria === categoriaId)))
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     } else {
-      gFetch
+      gFetch()
         .then((resp) => setProducts(resp))
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
@@ -27,17 +28,7 @@ const ItemListContainer = (obj) => {
     <h2 className="loading"> Cargando ... </h2>
   ) : (
     <div className="card-site">
-      {products.map((obj) => (
-        <div className="tarjeta" key={obj.id}>
-          <Link className="link" to={`/detail/${obj.id}`}>
-            <div className="titulo"> {obj.nombre}</div>
-            <center>
-              <img className="cuerpo" src={obj.foto} />
-            </center>
-            <div className="pie">{obj.precio} </div>
-          </Link>
-        </div>
-      ))}
+      <ItemList products={products} />
     </div>
   );
 };

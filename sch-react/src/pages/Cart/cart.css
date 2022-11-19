@@ -1,10 +1,6 @@
 .carrito-img-container {
-  /* width: 100%; */
   text-align: center;
-  /* height: 20%; */
-  position: absolute;
-  /* bottom: 20%;
-  left: 60%; */
+  position: fixed;
 }
 
 .carrito:hover {
