@@ -9,15 +9,6 @@
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-a:hover {
-  color: #202020;
-}
-
 .logo-container {
   width: 100%;
   text-align: center;
@@ -35,21 +26,40 @@ a:hover {
 
 .cart-site {
   grid-column: 10/11;
-  grid-row: 13/15;
-  padding: 10%;
+  grid-row: 13/14;
+  padding-left: 110px;
 }
 
 .card-site {
-  grid-column: 2/6;
+  grid-column: 2/11;
   grid-row: 4/15;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .loading {
-  color: #ffff;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
-  font-size: xx-large;
+  grid-column: 5/8;
+  grid-row: 7/9;
+}
+.spinner {
+  border: 4px solid rgba(226, 108, 12, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: rgb(255, 115, 0);
+
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .btn {
@@ -68,9 +78,30 @@ a:hover {
   transition: all 0.2s;
 }
 
-.btn:hover {
+.btn-remove {
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(255, 255, 255);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   color: black;
-  background-color: rgb(255, 255, 255);
+  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.btn-remove:hover {
+  color: #fff;
+  background-color: red;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: rgba(17, 94, 175, 1);
 }
 
 .cuerpo-detail {
@@ -101,11 +132,26 @@ a:hover {
 }
 
 .item-site {
-  grid-column: 3/9;
+  grid-column: 4/9;
   grid-row: 5/8;
 }
 
 .cantidad {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serifF;
+}
+
+.form {
+  grid-row: 8/12;
+  grid-column: 1/3;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-left: 72px;
+}
+
+.cart-number {
+  text-decoration: none;
+  color: rgb(255, 115, 0);
+  position: fixed;
 }

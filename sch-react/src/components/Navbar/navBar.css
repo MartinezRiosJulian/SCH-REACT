@@ -9,7 +9,7 @@
   cursor: pointer;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .menu-list-item {
@@ -18,16 +18,17 @@
 }
 
 .menu-list-item {
-  padding: 14px ;
+  padding: 14px;
   width: 100%;
+  list-style: none;
 }
 
 .menu-list-item:hover {
-  background-color: #ffff;
+  background-color: rgba(17, 94, 175, 1);
+  transition: 0.2s;
 }
 
-    /* .hover {
-      color: #202020;
-    } */
-
-
+.hoverMenu {
+  text-decoration: none;
+  color: #fff;
+}

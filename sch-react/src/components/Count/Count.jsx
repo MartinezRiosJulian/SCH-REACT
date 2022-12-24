@@ -2,29 +2,29 @@ import { useState } from "react";
 
 const Count = ({ initial = 1, stock = 20, onAdd }) => {
 
-  const [cantidad, setCantidad] = useState(initial)
+  const [quantity, setQuantity] = useState(initial)
 
-  const sumar = () => {
-    if (cantidad < stock) {
-      setCantidad(cantidad + 1)
+  const addStock = () => {
+    if (quantity < stock) {
+      setQuantity(quantity + 1)
     }
   }
 
-  const restar = () => {
-    if (cantidad > 1) {
-    setCantidad(cantidad - 1)
+  const subStock = () => {
+    if (quantity > 1) {
+    setQuantity(quantity - 1)
     }
   }
 
   const add = () => {
-    onAdd(cantidad)
+    onAdd(quantity)
   }
 
   return (
     <div>
-      <button className="btn" onClick={restar} >-</button>
-      <label className="cantidad">{cantidad}</label>
-      <button className="btn" onClick={sumar}>+</button><br />
+      <button className="btn" onClick={subStock} >-</button>
+      <label className="quantity">{quantity}</label>
+      <button className="btn" onClick={addStock}>+</button><br />
       <button className="btn" onClick={add}>Agregar</button>
     </div>
   );

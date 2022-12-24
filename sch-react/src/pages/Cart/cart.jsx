@@ -1,21 +1,27 @@
-import { Link } from "react-router-dom";
-import "./cart.css";
+import { useCartContext } from "../../context/CartContext";
+import CartForm from "./CartForm";
+import CartList from "./CartList";
 
 const Cart = () => {
+
+  const { cartList, cleanCart, priceF } = useCartContext()
+
   return (
-    <div className="cart-site">
-      <Link to={"/Cart"}>
-        <div className="carrito-img-container">
-          <img
-            src="public/assets/cart2.webp"
-            className="carrito"
-            width="65"
-            height="65"
-            alt=""
-          />
+    <>
+      {cartList.length !== 0 ? <>
+        <CartList />
+        <CartForm />
+        <div className="btn-cart">
+          <button className="btn-remove" onClick={cleanCart}>Limpiar carrito</button>
         </div>
-      </Link>
-    </div>
+        <div className="total">Total <br />
+          {priceF() !== 0 && priceF()}
+        </div>
+      </>
+        :
+        <></>
+      }
+    </>
   );
 };
 

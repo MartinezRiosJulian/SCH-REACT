@@ -6,14 +6,13 @@ const Item = ({product}) => {
         <div className="tarjeta">
                 <Link className="link" to={`/detail/${product.id}`}>
                     <div className="titulo">
-                        {product.nombre}
+                        {product.name}
                     </div>
                     <center>
-                        <img className="cuerpo" src={product.foto} />
+                        <img className="cuerpo" src={product.url} />
                     </center>
                     <div className="pie">
-                        {product.precio}
-                        {/* {product.categoria} */}
+                        <p>Ver detalle</p>
                     </div>
                 </Link>
             </div>

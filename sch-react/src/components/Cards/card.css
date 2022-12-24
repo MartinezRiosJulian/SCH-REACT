@@ -1,16 +1,17 @@
 .tarjeta {
-  width: 100%;
+  width: 25%;
+  height: fit-content;
   border-radius: 22px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: #ffff;
-  margin: 8px 0;
+  margin: 10px ;
 }
 .tarjeta:hover {
   box-shadow: 2px 2px 8px 4px #d3d3d3d1;
 }
 .titulo {
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px 10px 0 10px;
   text-align: center;
   color: #202020;
@@ -22,7 +23,7 @@
 }
 .pie {
   background: #202020;
-  border-radius: 0 15px 15px 0;
+  border-radius:0 0 15px 15px;
   padding: 10px;
   text-align: center;
   color: #ffff;
@@ -33,10 +34,10 @@
 }
 .pie:hover {
   background: rgba(17, 94, 175, 1);
+  transition: all 0.2s;
   color: white;
 }
 
 .link {
-  display: flex;
-  justify-content: space-between;
+text-decoration: none;
 }

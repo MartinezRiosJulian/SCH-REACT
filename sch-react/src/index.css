@@ -4,14 +4,7 @@
 }
 html {
   height: 100vh;
-  /* background-image: linear-gradient(to top, #2e218d 0%, #f16818 100%); */
-  /* background: rgb(207, 92, 36);
-  background: linear-gradient(
-    180deg,
-    rgba(207, 92, 36, 1) 19%,
-    rgba(17, 94, 175, 1) 100%
-  ); */
-  background: #2c2a2a;
+  background: #2c2a2a;  
 }
 #root .root {
   display: grid;
